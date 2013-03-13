@@ -11,6 +11,13 @@
  *= require_self
  *= require_tree .
  */
+ html {
+ 	height: 100%;
+ }
+
+ body {
+ 	height: 100%;
+ }
 
 #banner {
 	background:		#9c9;
@@ -35,7 +42,9 @@
 }
 
 #columns {
-	background: #141;
+	position:	absolute;
+	top:		70px;
+	bottom:		0;
 
 	#main {
 		margin-left:	13em;
@@ -44,11 +53,12 @@
 	}
 
 	#side {
+		background: #141;
 		margin-left:	1em;
 		float:		left;
 		padding:	1em 1em;
 		width:		130px;
-		min-height:	400px;
+		height:		100%;
 		background:	#141;
 
 		ul {
@@ -64,7 +74,7 @@
 			}
 		}
 	/*Figure this out! Put the timebar at the bottom of the side*/
-	.timebar {
+	p, div.timebar {
 		color: #9b9;
 		vertical-align:	bottom;
 	}
