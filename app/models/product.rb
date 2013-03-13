@@ -1,4 +1,5 @@
 # Why does this cause my tests to fail?!
+# Hey past-Chris, it's future-Chris, learn how to write a RegExp
 # 
 # class Product < ActiveRecord::Base
 # 	validates :title, :description, :image_url, presence: true
@@ -28,4 +29,8 @@ class Product < ActiveRecord::Base
     with:    %r{\.(gif|jpg|png)\Z}i,
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
+end
+
+def self.latest
+	Product.order('updated_at').last
 end
