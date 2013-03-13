@@ -29,8 +29,10 @@ class Product < ActiveRecord::Base
     with:    %r{\.(gif|jpg|png)\Z}i,
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
+
+  # Hey idiot, define this inside of the class, not out in the wild!
+  def self.latest
+	Product.order('updated_at').last
+  end
 end
 
-def self.latest
-	Product.order('updated_at').last
-end

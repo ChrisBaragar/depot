@@ -48,6 +48,7 @@
 		float:		left;
 		padding:	1em 1em;
 		width:		130px;
+		min-height:	400px;
 		background:	#141;
 
 		ul {
@@ -62,5 +63,11 @@
 				font-size: small;
 			}
 		}
+	/*Figure this out! Put the timebar at the bottom of the side*/
+	.timebar {
+		color: #9b9;
+		vertical-align:	bottom;
+	}
+
 	}
 }
