@@ -44,7 +44,7 @@
 #columns {
 	position:	absolute;
 	top:		70px;
-	bottom:		0;
+	bottom:		0px;
 
 	#main {
 		margin-left:	13em;
@@ -75,8 +75,11 @@
 		}
 	/*Figure this out! Put the timebar at the bottom of the side*/
 	p, div.timebar {
-		color: #9b9;
+		position:		fixed;
+		bottom:			20px;
+		color: 			#9b9;
 		vertical-align:	bottom;
+
 	}
 
 	}

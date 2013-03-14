@@ -19,7 +19,12 @@
 				<li><a href="http://.../news">News</a></li>
 				<li><a href="http://.../contact">Contact</a></li>
 			</ul>
-			<div class="timebar">TEST</div>
+			<div class="timebar">
+				<% t=Time.now %>
+				<%= t.strftime("It's %l:%M%P") %>
+				<br>
+				<%= t.strftime("on %A") %>
+			</div>
 		</div>
 		<div id="main">
 			<%= yield %>
