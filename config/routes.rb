@@ -4,7 +4,6 @@ Depot::Application.routes.draw do
   resources :carts
 
   get "store/index"
-  get "stroe/index"
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,6 +15,7 @@ Depot::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

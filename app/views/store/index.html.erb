@@ -4,7 +4,7 @@
 
 <h1>
 Your Pragmatic Catalog
-<% if session[:store_index_counter] >=5 %>
+<% if session[:store_index_counter] >= 5 %>
 	<div id="counter"> 
 	<%= pluralize session[:store_index_counter], 'visit' %> since adding to cart</div>
 <% end %>
