@@ -11,6 +11,11 @@
 		border-bottom: 3px dotted #77d;
 	}
 
+	#counter {
+		display:		inline;
+		float:		right;
+	}
+
 	/* An entry in the story catalog */
 	.entry {
 		overflow:		auto;
@@ -38,6 +43,11 @@
 			margin-left:	100px;
 			margin-top:		0.5em;
 			margin-bottom:	0.8em;
+
+			form, div{
+				float:		right;
+				display: 	inline;
+			}
 		}
 
 		.price {
