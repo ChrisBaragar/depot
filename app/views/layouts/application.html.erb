@@ -19,6 +19,13 @@
 				<li><a href="http://.../news">News</a></li>
 				<li><a href="http://.../contact">Contact</a></li>
 			</ul>
+
+			<!--This uses an application helper to only render the cart if there's stuff in it. -->
+			<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+				<%= render @cart %>
+			<% end %>
+			
+
 			<div class="timebar">
 				<% t=Time.now %>
 				<%= t.strftime("It's %l:%M%P") %>
