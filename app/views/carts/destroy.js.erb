@@ -1,0 +1,10 @@
+// Only show the cart if it has items
+//if ($('#cart tr').length > 0) { $('#cart tr').not('.total_line').remove(); $('#cart').hide('blind', 1000); ) }
+
+// Replace #cart with 'render the instance cart'
+//$('#cart').html("<%= escape_javascript render(@cart) %>");
+
+
+// Attempt from pragprog.com
+$('#cart tr').not('.total_line').remove();
+$('#cart').hide('blind', 500);

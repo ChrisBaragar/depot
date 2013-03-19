@@ -1,5 +1,5 @@
 // Only show the cart if it has items
-if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 500); }
 
 // Replace #cart with 'render the instance cart'
 $('#cart').html("<%= escape_javascript render(@cart) %>");
