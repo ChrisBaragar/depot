@@ -61,9 +61,19 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to @line_item.cart, notice: 'Removed item from cart.' }
+      format.html { redirect_to store_url, notice: 'Removed item from cart.' }
+      format.js { @destroy_item = @line_item }
       format.json { head :no_content }
     end
+  end
+
+  # CB - I ADDED THIS
+  # POST /line_items
+  def decrement
+    #
+    # Needs doin'.
+    #
+
   end
 
   private
