@@ -47,7 +47,7 @@
 	bottom:		0px;
 
 	#main {
-		margin-left:	13em;
+		margin-left:	17em;
 		padding:		1em;
 		background:		white;
 	}
@@ -57,6 +57,7 @@
 		margin-left:	1em;
 		float:		left;
 		padding:	1em 1em;
+		width: 		15em;
 		height:		100%;
 
 		form, div {
@@ -100,5 +101,41 @@
 		vertical-align:	bottom;
 		}
 
+	}
+
+	.depot_form {
+		fieldset {
+			background: #dfd;
+
+			legend {
+				color: #dfd;
+				background: #141;
+				font-family: sans-serif;
+				padding: 0.2em 1em;
+			}
+		}
+
+		form {
+			label{
+				width: 5em;
+				float: left;
+				text-align: right;
+				padding-top: 0.2em;
+				margin-right: 0.1em;
+				display: block;
+			}
+
+			select, textarea, input {
+				margin-left: 0.5em;
+			}
+
+			.submit {
+				margin-left: 4em;
+			}
+
+			br {
+				display: none;
+			}
+		}
 	}
 }

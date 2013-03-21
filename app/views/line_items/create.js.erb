@@ -1,3 +1,6 @@
+// Hide the flash message
+$("#notice").hide("clip", { direction: "vertical" }, 500);
+
 // Only show the cart if it has items
 if ($('#cart tr').length == 1) { $('#cart').show('blind', 500); }
 
