@@ -10,7 +10,7 @@ Depot::Application.routes.draw do
   # CB - I ADDED THIS
   resources :line_items do
     member do
-      post 'decrement'
+      put 'decrement'
     end
   end
 

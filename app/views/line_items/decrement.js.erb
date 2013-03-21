@@ -1,0 +1,8 @@
+// Only show the cart if it has items
+//if ($('#cart tr').length == 1) { $('#cart').show('blind', 500); }
+
+// Replace #cart with 'render the instance cart'
+$('#cart').html("<%= escape_javascript render(@cart) %>");
+
+// Set the css and animate it for newly added item
+$('#current_item').css({'background-color':'#ff8888'}).animate({'background-color':'#114411'}, 1000);
