@@ -25,4 +25,19 @@ Depot::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
 
+  # CB - how e-mail is sent.
+  Depot::Application.configure do
+    config.action_mailer.delivery_method = :smtp
+
+    config.action_mailer.smtp_settings = {
+      address:      "smtp.gmail.com",
+      port:         587,
+      domain:       "gmail.com",
+      authentication: "plain",
+      user_name:    "chrisbaragar@gmail.com",
+      password:     "nope",
+      enable_starttls_auto: true
+      }
+  end
+
 end
