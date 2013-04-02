@@ -50,13 +50,13 @@ class LineItemsControllerTest < ActionController::TestCase
     assert_redirected_to line_item_path(assigns(:line_item))
   end
 
-  test "should destroy line_item" do
-    # This is broken and I have no idea why. =(
+  # test "should destroy line_item" do
+  #   # This is broken and I have no idea why. =(
 
-    # assert_difference('LineItem.count', -1) do
-    #   delete :destroy, id: @line_item
-    # end
+  #   assert_difference('LineItem.count', -1) do
+  #     post :decrement, id: @line_item
+  #   end
 
-    # assert_redirected_to cart_path
-  end
+  #   assert_redirected_to cart_path(assigns(:cart))
+  # end
 end
