@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 ## Added from railscasts tutorial
 gem 'bcrypt-ruby', :require => 'bcrypt'
-#gem 'protected_attributes'
+gem 'protected_attributes'
 
 # Use unicorn as the app server
 # gem 'unicorn'
