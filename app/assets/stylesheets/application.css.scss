@@ -30,6 +30,19 @@
 	img {
 		float: left;
 	}
+
+	#user_nav {
+		float:		right;
+		font:		14px "Times New Roman", serif;
+		background:		#585;
+		padding:		3px;
+		color:			#020;
+		border-radius:	4px;
+
+		a:link {color: 		#FFF}
+		a:visited {color: 	#FFF}
+		a:hover {color:		#FFF}
+	}
 }
 
 #notice {

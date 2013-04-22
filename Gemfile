@@ -26,7 +26,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+# gem 'bcrypt-ruby', '~> 3.0.0'
+## Added from railscasts tutorial
+gem 'bcrypt-ruby', :require => 'bcrypt'
+#gem 'protected_attributes'
 
 # Use unicorn as the app server
 # gem 'unicorn'

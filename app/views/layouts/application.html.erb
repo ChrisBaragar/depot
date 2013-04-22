@@ -6,11 +6,22 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body class='<%= controller.controller_name %>'>
 	<div id="banner">
+		<div id="user_nav">
+			<% if current_user %>
+				Logged in as: <%= current_user.email %>
+				<%= link_to "Log out", log_out_path %>
+			<% else %>
+				<%= link_to "Sign up", sign_up_path %> or
+				<%= link_to "Log in", log_in_path %>
+			<% end %>
+		</div>
 		<%= link_to image_tag("logo.png"), store_path %>
 		<%= @page_title || "Pragmatic Bookshelf"%>
 	</div>
+
 	<div id="columns">
 		<div id="side">
 			<ul>
@@ -35,6 +46,9 @@
 			</div>
 		</div>
 		<div id="main">
+<!-- 				<% flash.each do |name,msg| %>
+					<%= content_tag :div, msg, :id => "flash_#{name}" %>
+				<% end %> -->
 			<%= yield %>
 		</div>
 	</div>

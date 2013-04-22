@@ -1,11 +1,18 @@
  Depot::Application.routes.draw do
-  resources :users
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "store#index"
+  get "user/new"
 
   resources :orders
 
   resources :line_items
 
   resources :carts
+
+  resources :users
+  resources :sessions
 
   get "store/index"
   resources :products do

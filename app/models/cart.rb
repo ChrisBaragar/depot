@@ -1,6 +1,7 @@
 class Cart < ActiveRecord::Base
 		#dependent here means if the cart is destroyed, so too are the line_items
 		has_many :line_items, dependent: :destroy
+		attr_protected
 
 		def add_product(product_id)
 			# find_by_product_id is a dynamic finder. cool!
