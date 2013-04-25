@@ -12,12 +12,23 @@
   root :to => "store#index"
   get "user/new"
 
-  resources :orders
+  # scope accepts a string. passing in a parameter in parentheses makes it optional. cool. (:locale)
+  scope '(:locale)' do
+    resources :orders
 
-  resources :line_items
+    resources :line_items
 
-  resources :carts
+    resources :carts
 
+    # CB - I ADDED THIS
+    resources :line_items do
+      member do
+        put 'decrement'
+      end
+    end
+    root to: 'store#index', as: 'store', via: :all
+  end
+  
   resources :users
   resources :sessions
 
@@ -26,20 +37,12 @@
     get :who_bought, on: :member
   end
 
-
-  # CB - I ADDED THIS
-  resources :line_items do
-    member do
-      put 'decrement'
-    end
-  end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root to: 'welcome#index'
-  root to: 'store#index', as: 'store'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

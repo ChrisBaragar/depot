@@ -26,6 +26,7 @@
 	font:			small-caps 40px/40px "Times New Roman", serif;
 	color:			#282;
 	text-align:		center;
+	position:		relative;
 
 	img {
 		float: left;
@@ -43,6 +44,8 @@
 		a:visited {color: 	#FFF}
 		a:hover {color:		#FFF}
 	}
+
+
 }
 
 #notice {
@@ -63,6 +66,13 @@
 		margin-left:	17em;
 		padding:		1em;
 		background:		white;
+
+		.locale{
+			position:	absolute;
+			bottom: 	10px;
+			right:		10px;
+			margin:		-0.25em 0.1em;
+		}
 	}
 
 	#side {
@@ -102,10 +112,17 @@
 					color:	#bfb;
 					font-size: small;
 				}
-		}
+			}
 		
 		}
-	/*Figure this out! Put the timebar at the bottom of the side*/
+
+		div.funheader {
+			background:		#99F;
+			padding:		3px;
+			color:			#020;
+			border-radius:	4px;
+		}
+	
 	p, div.timebar {
 		position:		fixed;
 		bottom:			20px;
